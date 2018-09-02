@@ -1,3 +1,5 @@
-# gitignore
+# vi .gitignore
 
+# xcuserdata
 /cpp_study/cpp_study.xcodeproj/project.xcworkspace/*
+/cpp_study/cpp_study.xcodeproj/xcuserdata/*
