@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C176A988213BF76C00F1BD5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C176A987213BF76C00F1BD5B /* main.cpp */; };
+		C176A990213C103A00F1BD5B /* ch_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C176A98E213C103A00F1BD5B /* ch_01.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		C176A984213BF76C00F1BD5B /* cpp_study */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpp_study; sourceTree = BUILT_PRODUCTS_DIR; };
 		C176A987213BF76C00F1BD5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C176A98E213C103A00F1BD5B /* ch_01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_01.cpp; sourceTree = "<group>"; };
+		C176A98F213C103A00F1BD5B /* ch_01.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_01.hpp; sourceTree = "<group>"; };
+		C176A991213C10CE00F1BD5B /* cpp_pch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpp_pch.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				C176A987213BF76C00F1BD5B /* main.cpp */,
+				C176A98E213C103A00F1BD5B /* ch_01.cpp */,
+				C176A98F213C103A00F1BD5B /* ch_01.hpp */,
+				C176A991213C10CE00F1BD5B /* cpp_pch.pch */,
 			);
 			path = cpp_study;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C176A988213BF76C00F1BD5B /* main.cpp in Sources */,
+				C176A990213C103A00F1BD5B /* ch_01.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +246,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cpp_study/cpp_pch.pch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +256,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cpp_study/cpp_pch.pch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
