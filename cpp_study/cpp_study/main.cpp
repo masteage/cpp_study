@@ -7,13 +7,13 @@
 //
 
 #include "ch_01.hpp"
+#include "ch_02.hpp"
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
 	
-	// ch_01
-	ch_01_main();
+//	ch_01_main();
+	ch_02_main();
 	
+	cout << "\n\n\n" << endl;
 	return 0;
 }
