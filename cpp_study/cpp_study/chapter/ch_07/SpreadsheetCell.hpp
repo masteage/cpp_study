@@ -26,6 +26,10 @@ public:
 	SpreadsheetCell(double initialValue);
 	SpreadsheetCell(const std::string& initialValue);
 	
+	std::string mName = "";
+	~SpreadsheetCell(){cout<< mName << "'s ~SpreadsheetCell() called" <<endl;};
+	
+	
 	// - member method
 	void setValue(double inValue);
 	double getValue() const;		// const member method (not change variable)
@@ -37,6 +41,7 @@ protected:
 	
 private:
 	std::string doubleToString(double inValue) const;
+//	const std::string& doubleToString(double inValue) const;
 	double stringToDouble(const std::string& inString) const;
 	
 	// - member variable

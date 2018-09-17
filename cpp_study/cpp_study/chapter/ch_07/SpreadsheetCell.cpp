@@ -36,9 +36,9 @@ SpreadsheetCell::SpreadsheetCell(const std::string& initialValue){
 void SpreadsheetCell::setValue(double inValue){
 	mValue = inValue;
 	mString = doubleToString(mValue);
-	std::cout << "SpreadsheetCell::" << __FUNCTION__ << " called" << endl;
-	cout << "value : ";
-	printCell(*this);
+//	std::cout << "SpreadsheetCell::" << __FUNCTION__ << " called" << endl;
+//	cout << "value : ";
+//	printCell(*this);
 }
 
 double SpreadsheetCell::getValue() const{
@@ -57,9 +57,10 @@ const string& SpreadsheetCell::getString() const{
 
 //private:
 std::string SpreadsheetCell::doubleToString(double inValue) const{
+//const std::string& SpreadsheetCell::doubleToString(double inValue) const{
 	ostringstream ostr;
 	ostr << inValue;
-	return ostr.str();
+	return ostr.str();	// Returning reference to local temporary object
 }
 
 double SpreadsheetCell::stringToDouble(const std::string& inString) const{

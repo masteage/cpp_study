@@ -9,6 +9,141 @@
 #include "ch_07.hpp"
 #include "SpreadsheetCell.hpp"
 
+void ch_07_3_1_5(){
+	
+	class SpreadsheetCell_Tmp{
+	public:
+		SpreadsheetCell_Tmp() : value(0){};
+		double value;
+	};
+	
+	class SpreadsheetCell_Tmp_02{
+	public:
+		SpreadsheetCell_Tmp_02(double d){value = d;};
+		double value;
+	};
+	
+	class SomeClass{
+	public:
+		//		SomeClass(){};	// Constructor for 'SomeClass' must explicitly initialize the member 'mCell' which does not have a default constructor
+		SomeClass() : mCell(5.1){};
+	private:
+		SpreadsheetCell_Tmp_02 mCell;
+	};
+	
+	class SpreadsheetCell_Tmp_03{
+	public:
+		SpreadsheetCell_Tmp_03(const string& initialValue)
+		: mValue(stringToDouble(initialValue)), mString(initialValue){
+			//		: mString(initialValue), mValue(stringToDouble(mString)){			// not good
+			cout<< "mString : " << mString << " , mValue : " << mValue <<endl;
+		}
+		double stringToDouble(const std::string& inString) const{
+			double dValue = 0;
+			istringstream istr(inString);
+			istr >> dValue;
+			if(istr.fail() || !istr.eof()) {
+				return 0;
+			}
+			return dValue;
+		}
+	private:
+		
+		// dtor-intializer order
+		double mValue;
+		std::string mString;
+	};
+	
+	SpreadsheetCell_Tmp_03 tmp("105.3");
+}
+
+void ch_07_3_1_7(){
+	class EvenSequence{
+	public:
+		EvenSequence(initializer_list<double> args){
+			if (args.size() % 2 != 0) {
+				throw invalid_argument("initializer_list should "
+									   "contain even number of elements.");
+			}
+			mSequence.reserve(args.size());
+			//			for (auto value : args) {
+			//				mSequence.push_back(value);
+			//			}
+			mSequence.insert(cend(mSequence),cbegin(args),cend(args));
+		}
+		
+		void dump() const{
+			for (auto value : mSequence) {
+				cout << value << ", ";
+			}
+			cout << endl;
+		}
+	private:
+		vector<double> mSequence;
+	};
+	
+	EvenSequence p1 = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
+	//	EvenSequence p1{1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
+	p1.dump();
+	
+	try {
+		EvenSequence p2 = {1.0, 2.0, 3.0};
+	} catch (const invalid_argument& e) {
+		cout << e.what() << endl;
+	}
+}
+
+class MyClass_01{
+public:
+	MyClass_01() : mInt(2),mStr("dd") {};
+private:
+	int mInt = 1;
+	std::string mStr = "test";
+private:
+	static const int kI1 = 1;
+//	static const std::string kStr = "test";	// Static data member of type 'const std::string' (aka 'const basic_string<char, char_traits<char>,
+//	static int sI2 = 2;						// Non-const static data member must be initialized out of line
+	const int kI3 = 3;
+};
+
+class MyClass{
+public:
+	MyClass(){};
+	MyClass(char c) : MyClass(){};
+//	MyClass(char c) : MyClass(1.2) {};		// Constructor for 'MyClass' creates a delegation cycle
+//	MyClass(double d) : MyClass('m') {};	// Constructor for 'MyClass' creates a delegation cycle
+};
+
+void destructor_call_order(){
+	cout << "\n\ndestructor_call_order start" << endl;
+	SpreadsheetCell myCell(5);
+	myCell.mName = "myCell";
+	if (myCell.getValue() == 5) {
+		SpreadsheetCell anotherCell(6);
+		anotherCell.mName = "anotherCell";
+	}
+	{
+		SpreadsheetCell myCell2(4);
+		SpreadsheetCell anotherCell2(5);
+		myCell2.mName = "myCell2";
+		anotherCell2.mName = "anotherCell2";
+	}
+	cout << "destructor_call_order end\n\n" << endl;
+}
+
+void destructor_call_heap()
+{
+	cout << "\n\ndestructor_call_heap start" << endl;
+	SpreadsheetCell* cellPtr1 = new SpreadsheetCell(5);
+	cellPtr1->mName = "cellPtr1";
+	SpreadsheetCell* cellPtr2 = new SpreadsheetCell(6);	// not destructor call
+	cellPtr2->mName = "cellPtr2";
+	delete cellPtr1;
+	cellPtr1 = nullptr;
+	
+	cout << "destructor_call_heap end\n\n" << endl;
+}
+
 void ch_07_main(){
 	SpreadsheetCell tmp_01;
 	tmp_01.setValue(10);
@@ -91,7 +226,7 @@ void ch_07_main(){
 	
 	// - call
 	SpreadsheetCell myCell_default_ctor_01;
-	myCell_default_ctor_01.setValue(6);
+	auto myCellp_smart3 = make_unique<SpreadsheetCell>();
 	
 	// - call : bad
 	// compile - method declare
@@ -102,7 +237,26 @@ void ch_07_main(){
 	
 	
 	
+	class MyClass{
+	public:
+		MyClass() = default;	// explicity defaulted constructor
+	};
+	class MyClass_02{
+	public:
+		MyClass_02() = delete;	// explicity deleted constructor
+		MyClass_02(int n){};
+	};
 	
+//	MyClass myclass;
+//	MyClass_02 myclass_02;	// Call to deleted constructor of 'MyClass_02'
+//	MyClass_02 myclass_02(1);
+	
+	
+	ch_07_3_1_5();
+	ch_07_3_1_7();
+	destructor_call_order();
+	destructor_call_heap();
 	
 	cout << "end" << endl;
 }
+
