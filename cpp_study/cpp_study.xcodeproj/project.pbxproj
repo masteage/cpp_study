@@ -16,6 +16,7 @@
 		C1F4E5472160F35800735AD6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F4E5452160F35500735AD6 /* main.cpp */; };
 		C1F4E54E2160F51200735AD6 /* Spreadsheet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F4E54B2160F3CE00735AD6 /* Spreadsheet.cpp */; };
 		C1F4E54F2160F51600735AD6 /* SpreadsheetCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F4E5482160F3C000735AD6 /* SpreadsheetCell.cpp */; };
+		C1F4E55221610E9200735AD6 /* SpreadsheetApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F4E55021610E9200735AD6 /* SpreadsheetApplication.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,8 @@
 		C1F4E5492160F3C000735AD6 /* SpreadsheetCell.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpreadsheetCell.hpp; sourceTree = "<group>"; };
 		C1F4E54B2160F3CE00735AD6 /* Spreadsheet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Spreadsheet.cpp; sourceTree = "<group>"; };
 		C1F4E54C2160F3CE00735AD6 /* Spreadsheet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Spreadsheet.hpp; sourceTree = "<group>"; };
+		C1F4E55021610E9200735AD6 /* SpreadsheetApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpreadsheetApplication.cpp; sourceTree = "<group>"; };
+		C1F4E55121610E9200735AD6 /* SpreadsheetApplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpreadsheetApplication.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				C1F4E5492160F3C000735AD6 /* SpreadsheetCell.hpp */,
 				C1F4E54B2160F3CE00735AD6 /* Spreadsheet.cpp */,
 				C1F4E54C2160F3CE00735AD6 /* Spreadsheet.hpp */,
+				C1F4E55021610E9200735AD6 /* SpreadsheetApplication.cpp */,
+				C1F4E55121610E9200735AD6 /* SpreadsheetApplication.hpp */,
 			);
 			path = ch_08;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				C1F4E5472160F35800735AD6 /* main.cpp in Sources */,
 				C1F4E54F2160F51600735AD6 /* SpreadsheetCell.cpp in Sources */,
 				C1F4E54E2160F51200735AD6 /* Spreadsheet.cpp in Sources */,
+				C1F4E55221610E9200735AD6 /* SpreadsheetApplication.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

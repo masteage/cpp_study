@@ -10,18 +10,25 @@
 
 #pragma mark - Spreadsheet
 
+int Spreadsheet::sCounter;		// default 0
+//int Spreadsheet::sCounter = 10;
+
 #pragma mark - constructor/destructor
-Spreadsheet::Spreadsheet(int inWidth, int inHeight)
-: mWidth(inWidth)
-, mHeight(inHeight)
+Spreadsheet::Spreadsheet(int inWidth, int inHeight/*, SpreadsheetApplication& theApp*/):
+//mWidth(inWidth), mHeight(inHeight)
+mWidth(inWidth < kMaxWidth ? inWidth : kMaxWidth)
+,mHeight(inHeight < kMaxHeight ? inHeight : kMaxHeight)
+/*,mTheApp(theApp)*/
 {
+	setID();
 	mCells = new SpreadsheetCell*[mWidth];
 	for (int i = 0; i < mWidth; i++) {
 		mCells[i] = new SpreadsheetCell[mHeight];
 	}
 }
 
-Spreadsheet::Spreadsheet(const Spreadsheet &src){
+Spreadsheet::Spreadsheet(const Spreadsheet &src)/*:mTheApp(src.mTheApp)*/{
+	setID();
 	copyFrom(src);
 }
 
@@ -30,8 +37,11 @@ Spreadsheet::~Spreadsheet(){
 }
 
 #pragma mark - operator
-Spreadsheet& Spreadsheet::operator=(const Spreadsheet& rhs)
-{
+Spreadsheet& Spreadsheet::operator=(const Spreadsheet& rhs){
+	
+	// not set ID
+//	setID();
+	
 	// check for self-assignment
 	if (this == &rhs) {
 		return *this;
@@ -96,4 +106,3 @@ void Spreadsheet::deleteAll(){
 	delete[] mCells;
 	mCells = nullptr;
 }
-
