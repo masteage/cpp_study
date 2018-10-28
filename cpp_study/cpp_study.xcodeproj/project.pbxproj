@@ -96,6 +96,7 @@
 		C1E010AC218596BC0095567F /* SpreadsheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpreadsheetCell.h; sourceTree = "<group>"; };
 		C1E010AE21859D770095567F /* GridDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridDefinitions.h; sourceTree = "<group>"; };
 		C1E010AF21859DEB0095567F /* Grid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		C1E010B02185C39F0095567F /* GridString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridString.h; sourceTree = "<group>"; };
 		C1F4E5332160F1F700735AD6 /* ch_08.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_08.cpp; sourceTree = "<group>"; };
 		C1F4E5342160F1F700735AD6 /* ch_08.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_08.hpp; sourceTree = "<group>"; };
 		C1F4E5432160F2EF00735AD6 /* ch_08 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch_08; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +222,7 @@
 				C1E010AE21859D770095567F /* GridDefinitions.h */,
 				C1E010AB218596BC0095567F /* SpreadsheetCell.cpp */,
 				C1E010AC218596BC0095567F /* SpreadsheetCell.h */,
+				C1E010B02185C39F0095567F /* GridString.h */,
 			);
 			path = ch_11;
 			sourceTree = "<group>";

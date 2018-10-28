@@ -7,7 +7,8 @@
 //
 
 #include "ch_11.hpp"
-#include "Grid.h"
+//#include "Grid.h"
+#include "GridString.h"
 #include "SpreadsheetCell.h"
 
 using IntGrid = Grid<int>;
