@@ -57,12 +57,31 @@ void ch_12_1_3_3(){
 		cout << "dd" << endl;
 	}
 	
+	
+	
+	class myException: public exception{
+	public:
+		myException(string what){strWhat = what;}
+		
+	private:
+		string strWhat = "";
+		virtual const char* what() const throw(){
+			return strWhat.c_str();
+		}
+	};
+	
 	cout.exceptions(ios::failbit | ios::badbit | ios::eofbit);
 	try {
 		cout << "Hello World." << endl;
-	} catch (const ios_base::failure& ex) {
-		cerr << "Caught exception: " << ex.what() << ", error code = " << ex.code() << endl;
+		throw myException("my custom error");
+//		throw ios_base::failure("ios_base::failure - my call");
 	}
+	catch (const exception& e){
+		cerr << "Caught exception: " << e.what() << endl;
+	}
+//	catch (const ios_base::failure& ex) {
+//		cerr << "Caught exception: " << ex.what() << ", error code = " << ex.code() << endl;
+//	}
 	
 	cout.clear();
 }
@@ -97,7 +116,7 @@ void ch_12_1_3_4(){
 	// Use methods
 //	cout.precision(5);
 //	cout << "This should be '1.2346': " << 1.23456789 << endl;
-	cout << "This should be '1.2346': " << setprecision(1.23456789) << endl;
+	cout << "This should be '1.2346': " << setprecision(5) << 1.23456789 << endl;
 	
 	// Floating point values
 	double dbl = 1.452;
