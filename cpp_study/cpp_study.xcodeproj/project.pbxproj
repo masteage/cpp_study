@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C11118DD2145376100FCC9E7 /* ch_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11118DB2145376100FCC9E7 /* ch_02.cpp */; };
+		C113816321AA90AB0034EA02 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816221AA90AB0034EA02 /* main.cpp */; };
+		C113816621AA90B90034EA02 /* ch_13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816421AA90B90034EA02 /* ch_13.cpp */; };
+		C113816921AAC8D30034EA02 /* FileError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816721AAC8D30034EA02 /* FileError.cpp */; };
+		C113816D21AADDBD0034EA02 /* GameBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816B21AADDBD0034EA02 /* GameBoard.cpp */; };
 		C11DDDEC218F40850042DC80 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11DDDEB218F40850042DC80 /* main.cpp */; };
 		C11DDDEF218F40A60042DC80 /* ch_12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11DDDED218F40A60042DC80 /* ch_12.cpp */; };
 		C122F735214E507D002D772C /* SpreadsheetCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C122F733214E507D002D772C /* SpreadsheetCell.cpp */; };
@@ -31,6 +35,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C113815D21AA90520034EA02 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		C11DDDE5218F40310042DC80 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +94,15 @@
 /* Begin PBXFileReference section */
 		C11118DB2145376100FCC9E7 /* ch_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_02.cpp; sourceTree = "<group>"; };
 		C11118DC2145376100FCC9E7 /* ch_02.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_02.hpp; sourceTree = "<group>"; };
+		C113816121AA90520034EA02 /* ch_13 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch_13; sourceTree = BUILT_PRODUCTS_DIR; };
+		C113816221AA90AB0034EA02 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C113816421AA90B90034EA02 /* ch_13.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_13.cpp; sourceTree = "<group>"; };
+		C113816521AA90B90034EA02 /* ch_13.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_13.hpp; sourceTree = "<group>"; };
+		C113816721AAC8D30034EA02 /* FileError.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileError.cpp; sourceTree = "<group>"; };
+		C113816821AAC8D30034EA02 /* FileError.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileError.hpp; sourceTree = "<group>"; };
+		C113816A21AADC890034EA02 /* myClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myClass.h; sourceTree = "<group>"; };
+		C113816B21AADDBD0034EA02 /* GameBoard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameBoard.cpp; sourceTree = "<group>"; };
+		C113816C21AADDBD0034EA02 /* GameBoard.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameBoard.hpp; sourceTree = "<group>"; };
 		C11DDDE9218F40310042DC80 /* ch_12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch_12; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11DDDEB218F40850042DC80 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C11DDDED218F40A60042DC80 /* ch_12.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_12.cpp; sourceTree = "<group>"; };
@@ -128,6 +150,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C113815C21AA90520034EA02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C11DDDE4218F40310042DC80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +198,7 @@
 		C11118DA2145374100FCC9E7 /* chapter */ = {
 			isa = PBXGroup;
 			children = (
+				C113815621AA90450034EA02 /* ch_13 */,
 				C11DDDEA218F40650042DC80 /* ch_12 */,
 				C1E0109821858F4B0095567F /* ch_11 */,
 				C16DB2DA217C6834000E0430 /* ch_10 */,
@@ -182,6 +212,21 @@
 				C122F737214E56C4002D772C /* ch_07.hpp */,
 			);
 			path = chapter;
+			sourceTree = "<group>";
+		};
+		C113815621AA90450034EA02 /* ch_13 */ = {
+			isa = PBXGroup;
+			children = (
+				C113816221AA90AB0034EA02 /* main.cpp */,
+				C113816421AA90B90034EA02 /* ch_13.cpp */,
+				C113816521AA90B90034EA02 /* ch_13.hpp */,
+				C113816721AAC8D30034EA02 /* FileError.cpp */,
+				C113816821AAC8D30034EA02 /* FileError.hpp */,
+				C113816A21AADC890034EA02 /* myClass.h */,
+				C113816B21AADDBD0034EA02 /* GameBoard.cpp */,
+				C113816C21AADDBD0034EA02 /* GameBoard.hpp */,
+			);
+			path = ch_13;
 			sourceTree = "<group>";
 		};
 		C11DDDEA218F40650042DC80 /* ch_12 */ = {
@@ -236,6 +281,7 @@
 				C16DB2EC217C68F0000E0430 /* ch_10 */,
 				C1E010A421858FAD0095567F /* ch_11 */,
 				C11DDDE9218F40310042DC80 /* ch_12 */,
+				C113816121AA90520034EA02 /* ch_13 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +331,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C113815721AA90520034EA02 /* ch_13 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C113815E21AA90520034EA02 /* Build configuration list for PBXNativeTarget "ch_13" */;
+			buildPhases = (
+				C113815821AA90520034EA02 /* Sources */,
+				C113815C21AA90520034EA02 /* Frameworks */,
+				C113815D21AA90520034EA02 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ch_13;
+			productName = cpp_study;
+			productReference = C113816121AA90520034EA02 /* ch_13 */;
+			productType = "com.apple.product-type.tool";
+		};
 		C11DDDDF218F40310042DC80 /* ch_12 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C11DDDE6218F40310042DC80 /* Build configuration list for PBXNativeTarget "ch_12" */;
@@ -401,11 +464,23 @@
 				C16DB2E0217C68F0000E0430 /* ch_10 */,
 				C1E0109921858FAD0095567F /* ch_11 */,
 				C11DDDDF218F40310042DC80 /* ch_12 */,
+				C113815721AA90520034EA02 /* ch_13 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C113815821AA90520034EA02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C113816D21AADDBD0034EA02 /* GameBoard.cpp in Sources */,
+				C113816621AA90B90034EA02 /* ch_13.cpp in Sources */,
+				C113816321AA90AB0034EA02 /* main.cpp in Sources */,
+				C113816921AAC8D30034EA02 /* FileError.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C11DDDE0218F40310042DC80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +540,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		C113815F21AA90520034EA02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cpp_study/cpp_pch.pch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C113816021AA90520034EA02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cpp_study/cpp_pch.pch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C11DDDE7218F40310042DC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -677,6 +772,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C113815E21AA90520034EA02 /* Build configuration list for PBXNativeTarget "ch_13" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C113815F21AA90520034EA02 /* Debug */,
+				C113816021AA90520034EA02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C11DDDE6218F40310042DC80 /* Build configuration list for PBXNativeTarget "ch_12" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
