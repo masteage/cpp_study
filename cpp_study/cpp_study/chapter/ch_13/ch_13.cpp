@@ -310,7 +310,8 @@ void ch_13_3_4(){
 void funcTwo(){
 	ifstream istr;
 	istr.open("filename");
-	throw exception();
+	bool bException = true;
+	if(bException) throw exception();
 	
 	// Code will never be executed
 	// istr 소멸자(+close) 는 local 변수 이기 때문에 호출되지만, 그렇지 않은경우 위험
@@ -366,6 +367,7 @@ void ch_13_5_1(){
 		// make malloc_error_break
 		for(size_t i = 0 ; i < numInts ; i++){
 			int* tmp = new int[numInts];
+			tmp = 0;
 		}
 	} catch (const bad_alloc& e) {
 		cerr << __FILE__ << "(" << __LINE__ << "): Unable to allocate memory: " << e.what() << endl;
@@ -403,10 +405,12 @@ void ch_13_5_1_2(){
 		new_handler oldHandler = set_new_handler(myNewHandler);
 		size_t numInts = numeric_limits<int>::max();
 		int* ptr = new int[numInts];
+		ptr = 0;
 		
 		// make malloc_error_break
 		for(size_t i = 0 ; i < numInts ; i++){
 			int* tmp = new int[numInts];
+			tmp = 0;
 		}
 		
 		set_new_handler(oldHandler);
@@ -500,6 +504,7 @@ void ch_13_5_3(){
 #include "GameBoard.hpp"
 void processGameBoard(const GameBoard& board){
 	const GamePiece& piece = board.getPieceAt(0, 0);
+	piece.f();
 	
 	// Doesn't compile
 //	board.setPieceAt(1, 2, piece);

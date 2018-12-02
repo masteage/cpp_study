@@ -9,7 +9,10 @@
 #ifndef GameBoard_hpp
 #define GameBoard_hpp
 
-class GamePiece {};
+class GamePiece {
+public:
+	const void f() const {};
+};
 
 class GameBoard
 {
