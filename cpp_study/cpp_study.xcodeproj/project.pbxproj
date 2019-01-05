@@ -26,6 +26,9 @@
 		C176A990213C103A00F1BD5B /* ch_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C176A98E213C103A00F1BD5B /* ch_01.cpp */; };
 		C18030A721B43F97008DB38F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18030A621B43F97008DB38F /* main.cpp */; };
 		C18030AA21B43FE1008DB38F /* ch_14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18030A821B43FE1008DB38F /* ch_14.cpp */; };
+		C1ACF99521DBBD3600B1595D /* PacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1ACF99321DBBD3600B1595D /* PacketBuffer.cpp */; };
+		C1ACF99821DBC82A00B1595D /* ErrorCorrelator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1ACF99621DBC82A00B1595D /* ErrorCorrelator.cpp */; };
+		C1ACF99B21DBCC6100B1595D /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1ACF99921DBCC6100B1595D /* MyClass.cpp */; };
 		C1CDFFF321BD4D260094AB7D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1CDFFF221BD4D260094AB7D /* main.cpp */; };
 		C1CDFFF621BD4D3F0094AB7D /* ch_16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1CDFFF421BD4D3F0094AB7D /* ch_16.cpp */; };
 		C1E010A621858FF50095567F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1E010A521858FF50095567F /* main.cpp */; };
@@ -153,6 +156,12 @@
 		C18030A621B43F97008DB38F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C18030A821B43FE1008DB38F /* ch_14.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_14.cpp; sourceTree = "<group>"; };
 		C18030A921B43FE1008DB38F /* ch_14.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_14.hpp; sourceTree = "<group>"; };
+		C1ACF99321DBBD3600B1595D /* PacketBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PacketBuffer.cpp; sourceTree = "<group>"; };
+		C1ACF99421DBBD3600B1595D /* PacketBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PacketBuffer.hpp; sourceTree = "<group>"; };
+		C1ACF99621DBC82A00B1595D /* ErrorCorrelator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ErrorCorrelator.cpp; sourceTree = "<group>"; };
+		C1ACF99721DBC82A00B1595D /* ErrorCorrelator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ErrorCorrelator.hpp; sourceTree = "<group>"; };
+		C1ACF99921DBCC6100B1595D /* MyClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyClass.cpp; sourceTree = "<group>"; };
+		C1ACF99A21DBCC6100B1595D /* MyClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyClass.hpp; sourceTree = "<group>"; };
 		C1CDFFEF21BD4CCF0094AB7D /* ch_16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch_16; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CDFFF221BD4D260094AB7D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C1CDFFF421BD4D3F0094AB7D /* ch_16.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_16.cpp; sourceTree = "<group>"; };
@@ -360,6 +369,12 @@
 				C1CDFFF221BD4D260094AB7D /* main.cpp */,
 				C1CDFFF421BD4D3F0094AB7D /* ch_16.cpp */,
 				C1CDFFF521BD4D3F0094AB7D /* ch_16.hpp */,
+				C1ACF99321DBBD3600B1595D /* PacketBuffer.cpp */,
+				C1ACF99421DBBD3600B1595D /* PacketBuffer.hpp */,
+				C1ACF99621DBC82A00B1595D /* ErrorCorrelator.cpp */,
+				C1ACF99721DBC82A00B1595D /* ErrorCorrelator.hpp */,
+				C1ACF99921DBCC6100B1595D /* MyClass.cpp */,
+				C1ACF99A21DBCC6100B1595D /* MyClass.hpp */,
 			);
 			path = ch_16;
 			sourceTree = "<group>";
@@ -633,7 +648,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CDFFF321BD4D260094AB7D /* main.cpp in Sources */,
+				C1ACF99521DBBD3600B1595D /* PacketBuffer.cpp in Sources */,
 				C1CDFFF621BD4D3F0094AB7D /* ch_16.cpp in Sources */,
+				C1ACF99B21DBCC6100B1595D /* MyClass.cpp in Sources */,
+				C1ACF99821DBC82A00B1595D /* ErrorCorrelator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

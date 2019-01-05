@@ -363,9 +363,151 @@ void RoundRobin ()
 	
 }
 
+#include <queue>
+
+void ch_16_3_1_queue(){
+	queue<int> qInt_01;
+}
+
+#include "PacketBuffer.hpp"
+
+class IPPacket
+{
+public:
+	IPPacket(int id) : mID(id) {}
+	int getID() const { return mID; }
+	
+private:
+	int mID;
+};
+
+
+void ch_16_3_1_2_PacketBuffer(){
+	PacketBuffer<IPPacket> ipPackets(3);
+	
+	// Add 4 packets
+	for (int i = 1; i <= 4; ++i) {
+		if (!ipPackets.bufferPacket(IPPacket(i))) {
+			cout << "Packet " << i << " dropped (queue is full)." << endl;
+		}
+	}
+	
+	while (true) {
+		try {
+			IPPacket packet = ipPackets.getNextPacket();
+			cout << "Processing packet " << packet.getID() << endl;
+		} catch (const out_of_range&) {
+			cout << "Queue is empty." << endl;
+			break;
+		}
+	}
+	cout << "" << endl;
+}
+
+void ch_16_3_2_priority_queue(){
+	const size_t count = 10;
+	unsigned int arr[count];     // standard C-style array
+	
+	// Initialize each element of the array to the value of its index.
+	for (unsigned int i = 0; i < count; i++) {
+		arr[i] = i;
+	}
+	
+	vector<int> vec;    // STL vector
+	
+	// Insert the contents of the array at the end of the vector.
+	vec.insert(end(vec), arr, arr + count);
+	// Use std::cbegin() and std::cend()
+	//vec.insert(end(vec), cbegin(arr), cend(arr));
+	
+	// Print the contents of the vector.
+	for (const auto& i : vec) {
+		cout << i << " ";
+	}
+	cout << "" << endl;
+}
+
+#include "ErrorCorrelator.hpp"
+
+void ch_16_3_2_1_ErrorCorrelator(){
+	ErrorCorrelator ec;
+	
+	ec.addError(Error(3, "Unable to read file"));
+	ec.addError(Error(1, "Incorrect entry from user"));
+	ec.addError(Error(10, "Unable to allocate memory!"));
+	
+	while (true) {
+		try {
+			Error e = ec.getError();
+			cout << e << endl;
+		} catch (const out_of_range&) {
+			cout << "Finished processing errors" << endl;
+			break;
+		}
+	}
+	
+	cout << "" << endl;
+}
+
+#include "MyClass.hpp"
+void ch_16_4_1_pair(){
+	// two-argument constructor and default constructor
+	pair<string, int> myPair("hello", 5);
+	pair<string, int> myOtherPair;
+	
+	// Can assign directly to first and second
+	myOtherPair.first = "hello";
+	myOtherPair.second = 6;
+	
+	// copy constructor
+	pair<string, int> myThirdPair(myOtherPair);
+	
+	// operator<
+	if (myPair < myOtherPair) {
+		cout << "myPair is less than myOtherPair" << endl;
+	} else {
+		cout << "myPair is greater than or equal to myOtherPair" << endl;
+	}
+	
+	// operator==
+	if (myOtherPair == myThirdPair) {
+		cout << "myOtherPair is equal to myThirdPair" << endl;
+	} else {
+		cout << "myOtherPair is not equal to myThirdPair" << endl;
+	}
+	
+	pair<int, int> aPair = make_pair(5, 10);
+	auto aSecondPair = make_pair(5, 10);
+	aPair.first = 10;
+	aSecondPair.second = 5;
+	
+	// custom pair
+	pair<MyClass, int> tmp1(MyClass(2),1);	// <
+//	pair<MyClass, int> tmp1(MyClass(4),1);	// >
+//	pair<MyClass, int> tmp1(MyClass(4),2);	// ==
+	pair<MyClass, int> tmp2(MyClass(4),2);
+	if (tmp1 == tmp2) {
+		cout << "tmp1 == tmp2" << endl;
+	}
+	else if(tmp1 < tmp2){
+		cout << "tmp1 < tmp2" << endl;
+	}
+	else {
+		cout << "tmp1 > tmp2" << endl;
+	}
+	
+	cout << "" << endl;
+}
+
 void ch_16_main(){
 //	ch_16_2_1_2();
 //	ch_16_2_1_2_AddRemove();
 //	ch_16_2_1_2_MoveSemantics();
+//	ch_16_3_1_queue();
+//	ch_16_3_1_2_PacketBuffer();
+	ch_16_3_2_priority_queue();
+//	ch_16_3_2_1_ErrorCorrelator();
+//	ch_16_4_1_pair();
+	
 	cout << "" << endl;
 }
