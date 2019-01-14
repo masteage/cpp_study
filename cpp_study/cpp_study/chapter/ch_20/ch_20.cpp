@@ -195,12 +195,26 @@ void ch_20_3_2_1(){
 	cout << endl;
 }
 
+template <typename IteratorType>
+void iteratorTraitsTest(IteratorType it){
+	typename std::iterator_traits<IteratorType>::value_type temp;
+	temp = *it;
+//	auto temp = *it;
+	cout << temp << endl;
+}
+
+void ch_20_3_2_2(){
+	vector<int> v{ 5 };
+	iteratorTraitsTest(cbegin(v));
+}
+
 void ch_20_main(){
 //	ch_20_2_1();
 //	ch_20_2_2();
 //	ch_20_2_3();
 //	ch_20_2_3_set();
 //	ch_20_2_4();
-	ch_20_3_2_1();
+//	ch_20_3_2_1();
+	ch_20_3_2_2();
 	cout << "" << endl;
 }
