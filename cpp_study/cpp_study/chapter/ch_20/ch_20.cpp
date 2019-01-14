@@ -208,6 +208,105 @@ void ch_20_3_2_2(){
 	iteratorTraitsTest(cbegin(v));
 }
 
+/*
+#include "hash_map_01.h"
+using namespace ProCpp_01;
+
+void hash_map_01(){
+	hash_map<int, int> myHash;
+	myHash.insert(make_pair(4, 40));
+	myHash.insert(make_pair(6, 60));
+	
+	// x will have type hash_map<int, int>::value_type*
+	auto x = myHash.find(4);
+	if (x != nullptr) {
+		cout << "4 maps to " << x->second << endl;
+	} else {
+		cout << "cannot find 4 in map" << endl;
+	}
+	
+	myHash.erase(4);
+	
+	auto x2 = myHash.find(4);
+	if (x2 != nullptr) {
+		cout << "4 maps to " << x2->second << endl;
+	} else {
+		cout << "cannot find 4 in map" << endl;
+	}
+	
+	myHash[4] = 35;
+	myHash[4] = 60;
+	
+	auto x3 = myHash.find(4);
+	if (x3 != nullptr) {
+		cout << "4 maps to " << x3->second << endl;
+	} else {
+		cout << "cannot find 4 in map" << endl;
+	}
+	
+	
+	hash_map<int, int> myHash2;
+	myHash2 = myHash;
+	hash_map<int, int> myHash3(myHash2);
+}
+*/
+
+
+#include <map>
+#include "hash_map_02.h"
+using namespace ProCpp_02;
+
+void hash_map_02(){
+	//hash_map<string, int> myHash;
+	//myHash.insert(make_pair("KeyOne", 100));
+	//myHash.insert(make_pair("KeyTwo", 200));
+	//myHash.insert(make_pair("KeyThree", 300));
+	
+	hash_map<string, int> myHash{
+		{ "KeyOne", 100 },
+		{ "KeyTwo", 200 } };
+	
+	myHash.insert({
+		{ "KeyThree", 300 },
+		{ "KeyFour", 400 } });
+	
+	for (auto it = myHash.cbegin(); it != myHash.cend(); ++it) {
+		// Use both -> and * to test the operations
+		cout << it->first << " maps to " << (*it).second << endl;
+	}
+	
+	cout << "----" << endl;
+	
+	auto found = myHash.find("KeyThree");
+	if (found != end(myHash))
+	{
+		cout << "Found KeyThree: value = " << found->second << endl;
+	}
+	
+	cout << "----" << endl;
+	
+	// Print elements using range-based for loop
+	for (auto& p : myHash) {
+		cout << p.first << " maps to " << p.second << endl;
+	}
+	
+	cout << "----" << endl;
+	
+	// Create a map with all the elements in the hashmap
+	map<string, int> myMap(cbegin(myHash), cend(myHash));
+	for (auto& p : myMap) {
+		cout << p.first << " maps to " << p.second << endl;
+	}
+	
+	hash_map<string, int> myHash2;
+	myHash.swap(myHash2);
+	
+	hash_map<string, int> myHash3(std::move(myHash2));
+	
+	cout << myHash3.size() << endl;
+	cout << myHash3.max_size() << endl;
+}
+
 void ch_20_main(){
 //	ch_20_2_1();
 //	ch_20_2_2();
@@ -215,6 +314,8 @@ void ch_20_main(){
 //	ch_20_2_3_set();
 //	ch_20_2_4();
 //	ch_20_3_2_1();
-	ch_20_3_2_2();
+//	ch_20_3_2_2();
+//	hash_map_01();
+	hash_map_02();
 	cout << "" << endl;
 }
