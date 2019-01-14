@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>ch_20.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>cpp_study.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -70,6 +75,11 @@
 			<true/>
 		</dict>
 		<key>C180309921B43F74008DB38F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1B2823C21EC87010045C266</key>
 		<dict>
 			<key>primary</key>
 			<true/>
