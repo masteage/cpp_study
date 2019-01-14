@@ -22,9 +22,15 @@ void ch_20_2_1(){
 	auto it1 = find(begin(myVector), end(myVector), num);
 	auto it2 = find(rbegin(myVector), rend(myVector), num);
 	if (it1 != end(myVector)) {
+		
+		// 앞에서 부터
 		cout << "Found " << num << " at position " << it1 - begin(myVector) << " going forward." << endl;
 		cout << "Found " << num << " at position " << it2.base() - 1 - begin(myVector) << " going backward." << endl;
+		
+		// 뒤에서 부터.
 		cout << "Found " << num << " at position " << it2 - rbegin(myVector) << " going backward." << endl;
+//		cout << "Found " << num << " at position " << rbegin(myVector) - it2 << " going backward." << endl;
+//		cout << "Found " << num << " at position " << rbegin(myVector).base() - 1 - it2 << " going backward." << endl;
 	} else {
 		cout << "Failed to find " << num << endl;
 	}
@@ -158,10 +164,35 @@ void ch_20_2_4(){
 	
 	// Copy assignment operator
 //	copy(cbegin(vecSource_02), cend(vecSource_02), begin(vecThree));
-//	copy(make_move_iterator(cbegin(vecSource_02)), make_move_iterator(cend(vecSource_02)), make_move_iterator(begin(vecThree)));
-//	move(cbegin(vecSource_02), cend(vecSource_02), begin(vecThree));
-	move(make_move_iterator(cbegin(vecSource_02)), make_move_iterator(cend(vecSource_02)), make_move_iterator(begin(vecThree)));
+	
+	// Move assignment operator
+	copy(make_move_iterator(begin(vecSource_02)), make_move_iterator(end(vecSource_02)), make_move_iterator(begin(vecThree)));
+//	move(begin(vecSource_02), end(vecSource_02), begin(vecThree));
+//	move(make_move_iterator(begin(vecSource_02)), make_move_iterator(end(vecSource_02)), make_move_iterator(begin(vecThree)));
 	cout << "----" << endl;
+}
+
+template <typename InputIterator, typename OutputIterator, typename Predicate>
+OutputIterator find_all(InputIterator first, InputIterator last, OutputIterator dest, Predicate pred){
+	while (first != last) {
+		if (pred(*first)) {
+			*dest = first;
+			++dest;
+		}
+		++first;
+	}
+	return dest;
+}
+void ch_20_3_2_1(){
+	vector<int> vec{ 3, 4, 5, 4, 5, 6, 5, 8, 9 ,2 };
+	vector<vector<int>::iterator> matches;
+	find_all(begin(vec), end(vec), back_inserter(matches), [](int i){ return i == 5; });
+//	find_all(begin(vec), end(vec), inserter(matches,begin(matches)), [](int i){ return i == 5; });
+	cout << "Found " << matches.size() << " matching elements: " << endl;
+	for (auto it : matches) {
+		cout << *it << " at position " << (it - cbegin(vec)) << endl;
+	}
+	cout << endl;
 }
 
 void ch_20_main(){
@@ -169,6 +200,7 @@ void ch_20_main(){
 //	ch_20_2_2();
 //	ch_20_2_3();
 //	ch_20_2_3_set();
-	ch_20_2_4();
+//	ch_20_2_4();
+	ch_20_3_2_1();
 	cout << "" << endl;
 }
