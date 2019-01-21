@@ -10,6 +10,7 @@
 		C10681D721F5F4E400A50392 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681D621F5F4E400A50392 /* main.cpp */; };
 		C10681DA21F5F50100A50392 /* ch_21.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681D821F5F50100A50392 /* ch_21.cpp */; };
 		C10681DE21F605DC00A50392 /* SpreadsheetCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681DC21F605DC00A50392 /* SpreadsheetCell.cpp */; };
+		C10681E421F62BD300A50392 /* TypeInference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681E221F62BD300A50392 /* TypeInference.cpp */; };
 		C11118DD2145376100FCC9E7 /* ch_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11118DB2145376100FCC9E7 /* ch_02.cpp */; };
 		C113816321AA90AB0034EA02 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816221AA90AB0034EA02 /* main.cpp */; };
 		C113816621AA90B90034EA02 /* ch_13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816421AA90B90034EA02 /* ch_13.cpp */; };
@@ -161,6 +162,8 @@
 		C10681DF21F6174B00A50392 /* Grid_Ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grid_Ptr.h; sourceTree = "<group>"; };
 		C10681E021F629AE00A50392 /* OneDGrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneDGrid.h; sourceTree = "<group>"; };
 		C10681E121F62A1400A50392 /* NDGrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDGrid.h; sourceTree = "<group>"; };
+		C10681E221F62BD300A50392 /* TypeInference.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TypeInference.cpp; sourceTree = "<group>"; };
+		C10681E321F62BD300A50392 /* TypeInference.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TypeInference.hpp; sourceTree = "<group>"; };
 		C11118DB2145376100FCC9E7 /* ch_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_02.cpp; sourceTree = "<group>"; };
 		C11118DC2145376100FCC9E7 /* ch_02.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_02.hpp; sourceTree = "<group>"; };
 		C113816121AA90520034EA02 /* ch_13 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch_13; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +340,8 @@
 				C10681DF21F6174B00A50392 /* Grid_Ptr.h */,
 				C10681E021F629AE00A50392 /* OneDGrid.h */,
 				C10681E121F62A1400A50392 /* NDGrid.h */,
+				C10681E221F62BD300A50392 /* TypeInference.cpp */,
+				C10681E321F62BD300A50392 /* TypeInference.hpp */,
 			);
 			path = ch_21;
 			sourceTree = "<group>";
@@ -773,6 +778,7 @@
 				C10681D721F5F4E400A50392 /* main.cpp in Sources */,
 				C10681DA21F5F50100A50392 /* ch_21.cpp in Sources */,
 				C10681DE21F605DC00A50392 /* SpreadsheetCell.cpp in Sources */,
+				C10681E421F62BD300A50392 /* TypeInference.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
