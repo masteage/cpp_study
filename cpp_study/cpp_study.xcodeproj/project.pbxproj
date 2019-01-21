@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C10681D721F5F4E400A50392 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681D621F5F4E400A50392 /* main.cpp */; };
 		C10681DA21F5F50100A50392 /* ch_21.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681D821F5F50100A50392 /* ch_21.cpp */; };
+		C10681DE21F605DC00A50392 /* SpreadsheetCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10681DC21F605DC00A50392 /* SpreadsheetCell.cpp */; };
 		C11118DD2145376100FCC9E7 /* ch_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C11118DB2145376100FCC9E7 /* ch_02.cpp */; };
 		C113816321AA90AB0034EA02 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816221AA90AB0034EA02 /* main.cpp */; };
 		C113816621AA90B90034EA02 /* ch_13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C113816421AA90B90034EA02 /* ch_13.cpp */; };
@@ -154,6 +155,10 @@
 		C10681D621F5F4E400A50392 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C10681D821F5F50100A50392 /* ch_21.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_21.cpp; sourceTree = "<group>"; };
 		C10681D921F5F50100A50392 /* ch_21.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_21.hpp; sourceTree = "<group>"; };
+		C10681DB21F5F68F00A50392 /* Grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		C10681DC21F605DC00A50392 /* SpreadsheetCell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpreadsheetCell.cpp; sourceTree = "<group>"; };
+		C10681DD21F605DC00A50392 /* SpreadsheetCell.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpreadsheetCell.hpp; sourceTree = "<group>"; };
+		C10681DF21F6174B00A50392 /* Grid_Ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grid_Ptr.h; sourceTree = "<group>"; };
 		C11118DB2145376100FCC9E7 /* ch_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch_02.cpp; sourceTree = "<group>"; };
 		C11118DC2145376100FCC9E7 /* ch_02.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ch_02.hpp; sourceTree = "<group>"; };
 		C113816121AA90520034EA02 /* ch_13 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch_13; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +329,10 @@
 				C10681D621F5F4E400A50392 /* main.cpp */,
 				C10681D821F5F50100A50392 /* ch_21.cpp */,
 				C10681D921F5F50100A50392 /* ch_21.hpp */,
+				C10681DB21F5F68F00A50392 /* Grid.h */,
+				C10681DC21F605DC00A50392 /* SpreadsheetCell.cpp */,
+				C10681DD21F605DC00A50392 /* SpreadsheetCell.hpp */,
+				C10681DF21F6174B00A50392 /* Grid_Ptr.h */,
 			);
 			path = ch_21;
 			sourceTree = "<group>";
@@ -759,6 +768,7 @@
 			files = (
 				C10681D721F5F4E400A50392 /* main.cpp in Sources */,
 				C10681DA21F5F50100A50392 /* ch_21.cpp in Sources */,
+				C10681DE21F605DC00A50392 /* SpreadsheetCell.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

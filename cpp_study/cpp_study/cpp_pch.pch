@@ -21,4 +21,13 @@
 //#include <stdexcept>
 using namespace std;
 
+
+// ch 21
+//#define _TEMPLATE_NORMAL_					// ch_21_1_1
+//#define _DEFAULT_TEMPLATE_TYPE_			// ch_21_1_1_1
+//#define _TEMPLATE_TEMPLATE_PARAMETER_		// ch_21_1_2
+//#define _NON_TYPE_TEMPLATE_PARAMETER_		// ch_21_1_3
+#define _NON_TYPE_TEMPLATE_PARAMETER_REF_	// ch_21_1_3_1
+
+
 #endif /* cpp_pch_pch */
