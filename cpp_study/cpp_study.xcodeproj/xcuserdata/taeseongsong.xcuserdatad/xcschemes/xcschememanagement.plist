@@ -49,6 +49,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>ch_21.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>cpp_study.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,6 +64,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C10681CB21F5F4A400A50392</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C113815721AA90520034EA02</key>
 		<dict>
 			<key>primary</key>
